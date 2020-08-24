@@ -1,7 +1,7 @@
 <br/>
 <p align="center">
     <a href="https://sustain.nordquists.com" target="_blank">
-        <img width="50%" src="https://www.usecram.com/logo600x300.png" alt="Sustain logo">
+        <img width="50%" src="https://sustain.nordquists.com/static/logowithtext.png" alt="Sustain logo">
     </a
 </p>
 
@@ -15,7 +15,7 @@ Sustain is designed to make shopping sustainably easier. It allows you to easily
 
 **Sustain is a closed-source project.**
 
-## Demonstration 
+## Demonstrations
 
 <p align="center">
         <img width="50%" src="/demo/demo1.gif" alt="demo 1">
