@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "3123AD4A-2475-4893-8BF0-125539AFE187"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CF553A09-E433-4390-BE24-3BF7B503930A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sustain/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CF553A09-E433-4390-BE24-3BF7B503930A - e73e4ffe8d2c0f05"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in Sustain.ViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "Sustain"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seannordquist/Documents/Projects/sustain/Sustain/Sustain/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "252">
+               </Location>
+               <Location
+                  uuid = "CF553A09-E433-4390-BE24-3BF7B503930A - daff31bbc61617ab"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 () -&gt; () in Sustain.ViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "Sustain"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seannordquist/Documents/Projects/sustain/Sustain/Sustain/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "64">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "635EF772-FBC1-49DE-A040-AC7311BC9314"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sustain/VisionViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BBCAC09C-E738-4A3B-9025-498FE8C7BF69"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sustain/VisionViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CF5EE2C1-BAC5-4685-99CE-72DE35439BEC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sustain/CameraTips/CameraTipsView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "CameraTipsView"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "CF5EE2C1-BAC5-4685-99CE-72DE35439BEC - ca24bd51d29f5a13"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Sustain.CameraTipsView.IconImage.getter : Swift.Optional&lt;__C.UIImageView&gt;"
+                  moduleName = "Sustain"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seannordquist/Documents/Projects/sustain/Sustain/Sustain/CameraTips/CameraTipsView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "128">
+               </Location>
+               <Location
+                  uuid = "CF5EE2C1-BAC5-4685-99CE-72DE35439BEC - bb964b27d0f529e7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Sustain.CameraTipsView.IconImage.setter : Swift.Optional&lt;__C.UIImageView&gt;"
+                  moduleName = "Sustain"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seannordquist/Documents/Projects/sustain/Sustain/Sustain/CameraTips/CameraTipsView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "200">
+               </Location>
+               <Location
+                  uuid = "CF5EE2C1-BAC5-4685-99CE-72DE35439BEC - c7ca5d06c29ec114"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Sustain.CameraTipsView.IconImage.modify : Swift.Optional&lt;__C.UIImageView&gt;"
+                  moduleName = "Sustain"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seannordquist/Documents/Projects/sustain/Sustain/Sustain/CameraTips/CameraTipsView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  uuid = "CF5EE2C1-BAC5-4685-99CE-72DE35439BEC - f2442d59ad35e5f6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Sustain.CameraTipsView.IconImage.modify : Swift.Optional&lt;__C.UIImageView&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Sustain"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seannordquist/Documents/Projects/sustain/Sustain/Sustain/CameraTips/CameraTipsView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "76">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E82599B9-CB62-497B-BA7B-4FC9C1382D8A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sustain/VisionViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "recognizeTextHandler(request:error:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BEF93CBB-D8FA-4C4C-BE5B-AB587912F433"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sustain/IngredientDetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "IngredientDetailViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "BEF93CBB-D8FA-4C4C-BE5B-AB587912F433 - a2baa1804d211b5c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Sustain.IngredientDetailViewController.IngredientNameLabel.getter : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "Sustain"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seannordquist/Documents/Projects/sustain/Sustain/Sustain/IngredientDetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "128">
+               </Location>
+               <Location
+                  uuid = "BEF93CBB-D8FA-4C4C-BE5B-AB587912F433 - dd18c84955477750"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Sustain.IngredientDetailViewController.IngredientNameLabel.setter : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "Sustain"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seannordquist/Documents/Projects/sustain/Sustain/Sustain/IngredientDetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "200">
+               </Location>
+               <Location
+                  uuid = "BEF93CBB-D8FA-4C4C-BE5B-AB587912F433 - b2b1b9d666e375a1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Sustain.IngredientDetailViewController.IngredientNameLabel.modify : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "Sustain"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seannordquist/Documents/Projects/sustain/Sustain/Sustain/IngredientDetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  uuid = "BEF93CBB-D8FA-4C4C-BE5B-AB587912F433 - f9c9d7d6c55dece"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Sustain.IngredientDetailViewController.IngredientNameLabel.modify : Swift.Optional&lt;__C.UILabel&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Sustain"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seannordquist/Documents/Projects/sustain/Sustain/Sustain/IngredientDetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "76">
+               </Location>
+               <Location
+                  uuid = "BEF93CBB-D8FA-4C4C-BE5B-AB587912F433 - 2230999a99b249df"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Sustain.IngredientDetailViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Sustain.IngredientDetailViewController"
+                  moduleName = "Sustain"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seannordquist/Documents/Projects/sustain/Sustain/Sustain/IngredientDetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "236">
+               </Location>
+               <Location
+                  uuid = "BEF93CBB-D8FA-4C4C-BE5B-AB587912F433 - bd6ce50182160258"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Sustain.IngredientDetailViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Sustain.IngredientDetailViewController&gt;"
+                  moduleName = "Sustain"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seannordquist/Documents/Projects/sustain/Sustain/Sustain/IngredientDetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "184">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
