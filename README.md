@@ -1,7 +1,7 @@
 <br/>
 <p align="center">
     <a href="https://sustain.nordquists.com" target="_blank">
-        <img width="30%" src="https://sustain.nordquists.com/logowithtext.png" alt="Sustain logo">
+        <img width="15%" src="https://sustain.nordquists.com/logowithtext.png" alt="Sustain logo">
     </a
 </p>
 
