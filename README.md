@@ -11,8 +11,6 @@
 
 **Note: This demo project is not the Sustain project. This is a pared-down demonstration of some of Sustain's features. Sustain is a closed-source project.**
 
-Curious about Sustain? You can reach me 
-
 ## Demonstration 
 
 <p align="center">
@@ -22,7 +20,7 @@ Curious about Sustain? You can reach me
 </p>
 
 ## Technologies Used
-The main three tools I used to make this application are React.js, Node.js, and MongoDB. I used Figma for design. 
+I used Swift exclusively for the iOS application. I used Figma to design the application. 
 
 ## Have a question? Curious about Sustain?
 
