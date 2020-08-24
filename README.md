@@ -7,9 +7,13 @@
 
 <br/>
 
-[Sustain](https://sustain.nordquists.com) is a ingredient label scanner for detecting unsustainable ingredients  Sustain is written in **Swift with a backend (not shown here) in Python**. 
+[Sustain](https://sustain.nordquists.com) is a ingredient label scanner for detecting unsustainable ingredients. 
 
-**Note: This demo project is not the Sustain project. This is a pared-down demonstration of some of Sustain's features. Sustain is a closed-source project.**
+Sustain is designed to make shopping sustainably easier. It allows you to easily scan an ingredient label for thousands of potentially unsustainble ingredients in real-time, with instant feedback. Sustain is written in **Swift with a backend (not shown here) in Python**. 
+
+**Note: This demo project is not the Sustain project. This is a pared-down demonstration of some of Sustain's features with a limited dictionary. The full dictionary will be released on release of the application**
+
+**Sustain is a closed-source project.**
 
 ## Demonstration 
 
