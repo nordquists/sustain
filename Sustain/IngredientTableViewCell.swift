@@ -20,11 +20,4 @@ class IngredientTableViewCell: UITableViewCell {
         let radius = pillView.frame.height / 2
         pillView.layer.cornerRadius = radius
     }
-
-//    override func setSelected(_ selected: Bool, animated: Bool) {
-//        super.setSelected(selected, animated: animated)
-//
-//        // Configure the view for the selected state
-//    }
-    
 }
