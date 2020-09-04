@@ -12,7 +12,7 @@ import UIKit
 import AVFoundation
 import Vision
 
-class VisionViewController: HomeViewController {
+class VisionViewController: HomeViewController { // This is a subclass of our home view controller
     var request: VNRecognizeTextRequest!
     // Temporal string tracker
     let numberTracker = StringTracker()
@@ -30,7 +30,6 @@ class VisionViewController: HomeViewController {
     // Vision recognition handler.
     func recognizeTextHandler(request: VNRequest, error: Error?) {
         var numbers = [String]()
-        var redBoxes = [CGRect]() // Shows all recognized text lines
         var greenBoxes = [CGRect]() // Shows words that might be serials
         
         guard let results = request.results as? [VNRecognizedTextObservation] else {

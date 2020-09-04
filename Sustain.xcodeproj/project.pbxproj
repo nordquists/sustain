@@ -130,6 +130,8 @@
 		0E51F16824F04017004E7F96 /* Sustain */ = {
 			isa = PBXGroup;
 			children = (
+				0EA27F7D2501C7ED00141E16 /* Vision */,
+				0EA27F7C2501C76400141E16 /* State */,
 				0E03897D24F2F4B4001154F9 /* data.json */,
 				0E03897924F2D70B001154F9 /* IngredientDataUtils.swift */,
 				0E03897C24F2F49C001154F9 /* Data */,
@@ -160,6 +162,20 @@
 				0ED7150A24F19B0A000D5F23 /* CameraTipsView.xib */,
 			);
 			path = CameraTips;
+			sourceTree = "<group>";
+		};
+		0EA27F7C2501C76400141E16 /* State */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		0EA27F7D2501C7ED00141E16 /* Vision */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Vision;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
