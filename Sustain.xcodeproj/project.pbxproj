@@ -11,7 +11,7 @@
 		0E03896D24F1B5A5001154F9 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E03896C24F1B5A5001154F9 /* NibLoadable.swift */; };
 		0E03897524F22446001154F9 /* IngredientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E03897324F22445001154F9 /* IngredientTableViewCell.swift */; };
 		0E03897624F22446001154F9 /* IngredientTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E03897424F22445001154F9 /* IngredientTableViewCell.xib */; };
-		0E03897A24F2D70B001154F9 /* IngredientDataUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E03897924F2D70B001154F9 /* IngredientDataUtils.swift */; };
+		0E03897A24F2D70B001154F9 /* IngredientUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E03897924F2D70B001154F9 /* IngredientUtils.swift */; };
 		0E51F16A24F04018004E7F96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E51F16924F04018004E7F96 /* AppDelegate.swift */; };
 		0E51F17124F04018004E7F96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E51F16F24F04018004E7F96 /* Main.storyboard */; };
 		0E51F17324F0401A004E7F96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E51F17224F0401A004E7F96 /* Assets.xcassets */; };
@@ -50,7 +50,7 @@
 		0E03896C24F1B5A5001154F9 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		0E03897324F22445001154F9 /* IngredientTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientTableViewCell.swift; sourceTree = "<group>"; };
 		0E03897424F22445001154F9 /* IngredientTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IngredientTableViewCell.xib; sourceTree = "<group>"; };
-		0E03897924F2D70B001154F9 /* IngredientDataUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientDataUtils.swift; sourceTree = "<group>"; };
+		0E03897924F2D70B001154F9 /* IngredientUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientUtils.swift; sourceTree = "<group>"; };
 		0E51F16624F04017004E7F96 /* Sustain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sustain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E51F16924F04018004E7F96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E51F17024F04018004E7F96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -155,7 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				0E51F19D24F06353004E7F96 /* StringUtils.swift */,
-				0E03897924F2D70B001154F9 /* IngredientDataUtils.swift */,
+				0E03897924F2D70B001154F9 /* IngredientUtils.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -407,7 +407,7 @@
 				0E51F19E24F06353004E7F96 /* StringUtils.swift in Sources */,
 				0E03897524F22446001154F9 /* IngredientTableViewCell.swift in Sources */,
 				0E03896B24F1A8D4001154F9 /* IngredientDetailViewController.swift in Sources */,
-				0E03897A24F2D70B001154F9 /* IngredientDataUtils.swift in Sources */,
+				0E03897A24F2D70B001154F9 /* IngredientUtils.swift in Sources */,
 				0E51F19A24F0533C004E7F96 /* PreviewView.swift in Sources */,
 				0E51F16A24F04018004E7F96 /* AppDelegate.swift in Sources */,
 				0E76B3F624F184F50020366C /* ViewController.swift in Sources */,
