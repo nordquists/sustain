@@ -22,6 +22,7 @@
 		0E51F19E24F06353004E7F96 /* StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E51F19D24F06353004E7F96 /* StringUtils.swift */; };
 		0E76B36224F0884C0020366C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E76B36124F0884B0020366C /* SceneDelegate.swift */; };
 		0E76B3F624F184F50020366C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E76B3F524F184F50020366C /* HomeViewController.swift */; };
+		0EA27F7F2501CA5E00141E16 /* VisionViewControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA27F7E2501CA5E00141E16 /* VisionViewControllerState.swift */; };
 		0ED7150924F19393000D5F23 /* CameraTipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED7150824F19392000D5F23 /* CameraTipsView.swift */; };
 		0ED7150B24F19B0A000D5F23 /* CameraTipsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ED7150A24F19B0A000D5F23 /* CameraTipsView.xib */; };
 		0EEA83A924F36FF30069C001 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 0EEA83A824F36FF30069C001 /* .gitignore */; };
@@ -64,6 +65,7 @@
 		0E51F19D24F06353004E7F96 /* StringUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUtils.swift; sourceTree = "<group>"; };
 		0E76B36124F0884B0020366C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		0E76B3F524F184F50020366C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		0EA27F7E2501CA5E00141E16 /* VisionViewControllerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionViewControllerState.swift; sourceTree = "<group>"; };
 		0ED7150824F19392000D5F23 /* CameraTipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraTipsView.swift; sourceTree = "<group>"; };
 		0ED7150A24F19B0A000D5F23 /* CameraTipsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CameraTipsView.xib; sourceTree = "<group>"; };
 		0EEA83A824F36FF30069C001 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 		0E03897B24F2EFB4001154F9 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				0E03896C24F1B5A5001154F9 /* NibLoadable.swift */,
 				0E51F19D24F06353004E7F96 /* StringUtils.swift */,
 			);
 			path = Utils;
@@ -105,6 +108,8 @@
 		0E03897C24F2F49C001154F9 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				0E03897D24F2F4B4001154F9 /* data.json */,
+				0E03897924F2D70B001154F9 /* IngredientDataUtils.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -130,27 +135,9 @@
 		0E51F16824F04017004E7F96 /* Sustain */ = {
 			isa = PBXGroup;
 			children = (
-				0EA27F7D2501C7ED00141E16 /* Vision */,
-				0EA27F7C2501C76400141E16 /* State */,
-				0E03897D24F2F4B4001154F9 /* data.json */,
-				0E03897924F2D70B001154F9 /* IngredientDataUtils.swift */,
-				0E03897C24F2F49C001154F9 /* Data */,
-				0E03897B24F2EFB4001154F9 /* Utils */,
-				0E76B3F224F182330020366C /* ToolTips */,
-				0E51F16924F04018004E7F96 /* AppDelegate.swift */,
-				0E51F16F24F04018004E7F96 /* Main.storyboard */,
-				0E51F17224F0401A004E7F96 /* Assets.xcassets */,
-				0E51F17424F0401A004E7F96 /* LaunchScreen.storyboard */,
-				0E51F17724F0401A004E7F96 /* Info.plist */,
-				0E51F19B24F05A91004E7F96 /* VisionViewController.swift */,
-				0E51F19924F0533C004E7F96 /* PreviewView.swift */,
-				0E76B36124F0884B0020366C /* SceneDelegate.swift */,
-				0E76B3F524F184F50020366C /* HomeViewController.swift */,
-				0E03896A24F1A8D4001154F9 /* IngredientDetailViewController.swift */,
-				0E03896C24F1B5A5001154F9 /* NibLoadable.swift */,
-				0E03897324F22445001154F9 /* IngredientTableViewCell.swift */,
-				0E03897424F22445001154F9 /* IngredientTableViewCell.xib */,
 				0EEA83A824F36FF30069C001 /* .gitignore */,
+				0EA27F842501CD3A00141E16 /* Resources */,
+				0EA27F832501CD3000141E16 /* Sources */,
 			);
 			path = Sustain;
 			sourceTree = "<group>";
@@ -167,6 +154,7 @@
 		0EA27F7C2501C76400141E16 /* State */ = {
 			isa = PBXGroup;
 			children = (
+				0EA27F7E2501CA5E00141E16 /* VisionViewControllerState.swift */,
 			);
 			path = State;
 			sourceTree = "<group>";
@@ -174,8 +162,63 @@
 		0EA27F7D2501C7ED00141E16 /* Vision */ = {
 			isa = PBXGroup;
 			children = (
+				0E51F19B24F05A91004E7F96 /* VisionViewController.swift */,
 			);
 			path = Vision;
+			sourceTree = "<group>";
+		};
+		0EA27F802501CC9600141E16 /* PreviewView */ = {
+			isa = PBXGroup;
+			children = (
+				0E51F19924F0533C004E7F96 /* PreviewView.swift */,
+			);
+			path = PreviewView;
+			sourceTree = "<group>";
+		};
+		0EA27F812501CCA600141E16 /* IngredientTableView */ = {
+			isa = PBXGroup;
+			children = (
+				0E03897324F22445001154F9 /* IngredientTableViewCell.swift */,
+				0E03897424F22445001154F9 /* IngredientTableViewCell.xib */,
+			);
+			path = IngredientTableView;
+			sourceTree = "<group>";
+		};
+		0EA27F822501CCB600141E16 /* IngredientDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				0E03896A24F1A8D4001154F9 /* IngredientDetailViewController.swift */,
+			);
+			path = IngredientDetailView;
+			sourceTree = "<group>";
+		};
+		0EA27F832501CD3000141E16 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				0EA27F822501CCB600141E16 /* IngredientDetailView */,
+				0EA27F812501CCA600141E16 /* IngredientTableView */,
+				0EA27F802501CC9600141E16 /* PreviewView */,
+				0EA27F7D2501C7ED00141E16 /* Vision */,
+				0EA27F7C2501C76400141E16 /* State */,
+				0E03897C24F2F49C001154F9 /* Data */,
+				0E03897B24F2EFB4001154F9 /* Utils */,
+				0E76B3F224F182330020366C /* ToolTips */,
+				0E51F16924F04018004E7F96 /* AppDelegate.swift */,
+				0E76B36124F0884B0020366C /* SceneDelegate.swift */,
+				0E76B3F524F184F50020366C /* HomeViewController.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		0EA27F842501CD3A00141E16 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0E51F17224F0401A004E7F96 /* Assets.xcassets */,
+				0E51F16F24F04018004E7F96 /* Main.storyboard */,
+				0E51F17424F0401A004E7F96 /* LaunchScreen.storyboard */,
+				0E51F17724F0401A004E7F96 /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,6 +366,7 @@
 				0E51F19C24F05A91004E7F96 /* VisionViewController.swift in Sources */,
 				0E76B36224F0884C0020366C /* SceneDelegate.swift in Sources */,
 				0ED7150924F19393000D5F23 /* CameraTipsView.swift in Sources */,
+				0EA27F7F2501CA5E00141E16 /* VisionViewControllerState.swift in Sources */,
 				0E03896D24F1B5A5001154F9 /* NibLoadable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
