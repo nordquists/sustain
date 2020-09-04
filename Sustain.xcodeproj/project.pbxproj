@@ -136,7 +136,7 @@
 				0E03897924F2D70B001154F9 /* IngredientDataUtils.swift */,
 				0E03897C24F2F49C001154F9 /* Data */,
 				0E03897B24F2EFB4001154F9 /* Utils */,
-				0E76B3F224F182330020366C /* CameraTips */,
+				0E76B3F224F182330020366C /* ToolTips */,
 				0E51F16924F04018004E7F96 /* AppDelegate.swift */,
 				0E51F16F24F04018004E7F96 /* Main.storyboard */,
 				0E51F17224F0401A004E7F96 /* Assets.xcassets */,
@@ -155,13 +155,13 @@
 			path = Sustain;
 			sourceTree = "<group>";
 		};
-		0E76B3F224F182330020366C /* CameraTips */ = {
+		0E76B3F224F182330020366C /* ToolTips */ = {
 			isa = PBXGroup;
 			children = (
 				0ED7150824F19392000D5F23 /* CameraTipsView.swift */,
 				0ED7150A24F19B0A000D5F23 /* CameraTipsView.xib */,
 			);
-			path = CameraTips;
+			path = ToolTips;
 			sourceTree = "<group>";
 		};
 		0EA27F7C2501C76400141E16 /* State */ = {
