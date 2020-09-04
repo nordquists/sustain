@@ -21,7 +21,7 @@
 		0E51F19C24F05A91004E7F96 /* VisionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E51F19B24F05A91004E7F96 /* VisionViewController.swift */; };
 		0E51F19E24F06353004E7F96 /* StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E51F19D24F06353004E7F96 /* StringUtils.swift */; };
 		0E76B36224F0884C0020366C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E76B36124F0884B0020366C /* SceneDelegate.swift */; };
-		0E76B3F624F184F50020366C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E76B3F524F184F50020366C /* HomeViewController.swift */; };
+		0E76B3F624F184F50020366C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E76B3F524F184F50020366C /* ViewController.swift */; };
 		0EA27F7F2501CA5E00141E16 /* VisionViewControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA27F7E2501CA5E00141E16 /* VisionViewControllerState.swift */; };
 		0ED7150924F19393000D5F23 /* CameraTipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED7150824F19392000D5F23 /* CameraTipsView.swift */; };
 		0ED7150B24F19B0A000D5F23 /* CameraTipsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ED7150A24F19B0A000D5F23 /* CameraTipsView.xib */; };
@@ -64,7 +64,7 @@
 		0E51F19B24F05A91004E7F96 /* VisionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionViewController.swift; sourceTree = "<group>"; };
 		0E51F19D24F06353004E7F96 /* StringUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUtils.swift; sourceTree = "<group>"; };
 		0E76B36124F0884B0020366C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0E76B3F524F184F50020366C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		0E76B3F524F184F50020366C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0EA27F7E2501CA5E00141E16 /* VisionViewControllerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionViewControllerState.swift; sourceTree = "<group>"; };
 		0ED7150824F19392000D5F23 /* CameraTipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraTipsView.swift; sourceTree = "<group>"; };
 		0ED7150A24F19B0A000D5F23 /* CameraTipsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CameraTipsView.xib; sourceTree = "<group>"; };
@@ -162,17 +162,10 @@
 		0EA27F7D2501C7ED00141E16 /* Vision */ = {
 			isa = PBXGroup;
 			children = (
+				0EA27F852501CDD200141E16 /* Views */,
 				0E51F19B24F05A91004E7F96 /* VisionViewController.swift */,
 			);
 			path = Vision;
-			sourceTree = "<group>";
-		};
-		0EA27F802501CC9600141E16 /* PreviewView */ = {
-			isa = PBXGroup;
-			children = (
-				0E51F19924F0533C004E7F96 /* PreviewView.swift */,
-			);
-			path = PreviewView;
 			sourceTree = "<group>";
 		};
 		0EA27F812501CCA600141E16 /* IngredientTableView */ = {
@@ -197,7 +190,6 @@
 			children = (
 				0EA27F822501CCB600141E16 /* IngredientDetailView */,
 				0EA27F812501CCA600141E16 /* IngredientTableView */,
-				0EA27F802501CC9600141E16 /* PreviewView */,
 				0EA27F7D2501C7ED00141E16 /* Vision */,
 				0EA27F7C2501C76400141E16 /* State */,
 				0E03897C24F2F49C001154F9 /* Data */,
@@ -205,7 +197,7 @@
 				0E76B3F224F182330020366C /* ToolTips */,
 				0E51F16924F04018004E7F96 /* AppDelegate.swift */,
 				0E76B36124F0884B0020366C /* SceneDelegate.swift */,
-				0E76B3F524F184F50020366C /* HomeViewController.swift */,
+				0E76B3F524F184F50020366C /* ViewController.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -219,6 +211,14 @@
 				0E51F17724F0401A004E7F96 /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		0EA27F852501CDD200141E16 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0E51F19924F0533C004E7F96 /* PreviewView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -362,7 +362,7 @@
 				0E03897A24F2D70B001154F9 /* IngredientDataUtils.swift in Sources */,
 				0E51F19A24F0533C004E7F96 /* PreviewView.swift in Sources */,
 				0E51F16A24F04018004E7F96 /* AppDelegate.swift in Sources */,
-				0E76B3F624F184F50020366C /* HomeViewController.swift in Sources */,
+				0E76B3F624F184F50020366C /* ViewController.swift in Sources */,
 				0E51F19C24F05A91004E7F96 /* VisionViewController.swift in Sources */,
 				0E76B36224F0884C0020366C /* SceneDelegate.swift in Sources */,
 				0ED7150924F19393000D5F23 /* CameraTipsView.swift in Sources */,
@@ -540,7 +540,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D3WL6W2592;
-				INFOPLIST_FILE = Sustain/Info.plist;
+				INFOPLIST_FILE = Sustain/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -558,7 +558,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D3WL6W2592;
-				INFOPLIST_FILE = Sustain/Info.plist;
+				INFOPLIST_FILE = Sustain/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

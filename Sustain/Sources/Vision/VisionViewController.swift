@@ -12,7 +12,7 @@ import UIKit
 import AVFoundation
 import Vision
 
-class VisionViewController: HomeViewController { // This is a subclass of our home view controller
+class VisionViewController: ViewController { // This is a subclass of our view controller
     var request: VNRecognizeTextRequest!
     // Temporal string tracker
     let numberTracker = StringTracker()
