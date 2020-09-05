@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+protocol StateChanger: AnyObject {
+    func changeTo(state: State)
+}

@@ -11,6 +11,15 @@ import UIKit
 import AVFoundation
 import Vision
 
+protocol MainViewControllerDelegate: AnyObject {
+    // Go to the MainViewControllerState for descriptions
+    func didStartScanning()
+    func didStartDetecting()
+    func didTimeOutDetecting()
+    func didDetect()
+    func didDisableCamera()
+}
+
 class MainViewController: MainViewControllerState, UITableViewDelegate, UITableViewDataSource {
     
     // MARK: - UI Objects
@@ -27,18 +36,22 @@ class MainViewController: MainViewControllerState, UITableViewDelegate, UITableV
     @IBOutlet weak var isNoneTipsView: CameraTipsView!
     
     // MARK: - State Related Variables
-    var isDetecting = false // when the user points the camera at an ingredients label
-    var hasDetected = false // when ingredients begin to be parsed
-    var isNone = false
-    var hasSetDeadline = false
-    var ingredientCount = 0
     var detectedIngredients = [Ingredient]() // list of ingredients parsed for tableView
     var detectedIngredientsSet = Set<String>() // set for speeding up detecting duplicate detections
+    weak var stateChanger: StateChanger?
+    weak var delegate: MainViewControllerDelegate?
+    
+    // MARK: - Ingredient Search Set Loading
     var ingredientSet = IngredientSet(path: "data")
     
-    // MARK: - LoadView
-    override func loadView() {
-        super.loadView()
+    // MARK: - ViewDidLoad
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        stateChanger = self
+        delegate = self
+        
+        self.delegate?.didStartScanning()
         
         // configure animations
         detectedTipsView.setup(type: "detected")
@@ -46,13 +59,6 @@ class MainViewController: MainViewControllerState, UITableViewDelegate, UITableV
         undetectedTipsView.setup(type: "!detected")
         isNoneTipsView.setup(type: "isnone")
         isNoneTipsView.isHidden = true
-    }
-    
-    // MARK: - ViewDidLoad
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        print(ingredientSet.getIngredientRegex())
         
         let blur = UIVisualEffectView(effect: UIBlurEffect(style:
             UIBlurEffect.Style.light))
@@ -79,65 +85,9 @@ class MainViewController: MainViewControllerState, UITableViewDelegate, UITableV
     // MARK: - State Transitions
     @IBAction func handleResetAction(_ sender: Any) {
         DispatchQueue.main.async {
-            self.dispatch(type: "RESET")
+            self.delegate?.didStartScanning()
         }
         
-    }
-    
-    func dispatch(type: String) {
-        switch type {
-        case "DETECTING": do {
-            if !self.isNone {
-                // update tool tips
-                self.setViewHidden(view: self.detectedTipsView, hidden: false)
-                self.setViewHidden(view: self.undetectedTipsView, hidden: true)
-            }
-            }
-        case "NONE": do {
-            if !self.hasDetected {
-                self.setViewHidden(view: self.isNoneTipsView, hidden: false)
-                self.setViewHidden(view: self.detectedTipsView, hidden: true)
-                self.setViewHidden(view: self.undetectedTipsView, hidden: true)
-                backButton.isHidden = false
-                self.isNone = true
-            }
-            
-            }
-        case "DETECTED": do {
-            if true {
-                // update tool tips
-                print("detected")
-                self.setViewHidden(view: self.undetectedTipsView, hidden: true)
-                self.setViewHidden(view: self.detectedTipsView, hidden: true)
-                IngredientsFoundSubtitle.isHidden = false
-                IngredientsFoundTitle.text = self.detectedIngredients.count == 1 ? "Unsustainable Ingredient Found" : "Unsustainable Ingredients Found"
-                IngredientsFoundTitle.isHidden = false
-                backButton.isHidden = false
-                self.tableView.reloadData()
-            }
-            
-            }
-        case "RESET": do {
-            print("reset")
-            self.setViewHidden(view: self.undetectedTipsView, hidden: false)
-            self.setViewHidden(view: self.detectedTipsView, hidden: true)
-            self.setViewHidden(view: self.isNoneTipsView, hidden: true)
-            self.detectedIngredients = []
-            self.detectedIngredientsSet.removeAll()
-            backButton.isHidden = true
-            self.tableView.reloadData()
-            self.isDetecting = false
-            self.hasDetected = false
-            self.isNone = false
-            self.hasSetDeadline = false
-            self.ingredientCount = 0
-            IngredientsFoundSubtitle.isHidden = true
-            IngredientsFoundTitle.isHidden = true
-            }
-        default: do {
-            return
-            }
-        }
     }
     
     func setViewHidden(view: UIView, hidden: Bool) {
@@ -176,4 +126,79 @@ class MainViewController: MainViewControllerState, UITableViewDelegate, UITableV
         }
     }
     
+}
+
+// MARK: - State Changer Function
+extension MainViewController: StateChanger {
+    func changeTo(state: State) {
+        guard currentState != state else {
+            return
+        }
+        
+        currentState = state
+        
+        switch state {
+        case .hasStartedScanning:
+            self.setViewHidden(view: self.undetectedTipsView, hidden: false)
+            self.setViewHidden(view: self.detectedTipsView, hidden: true)
+            self.setViewHidden(view: self.isNoneTipsView, hidden: true)
+            detectedIngredients = [Ingredient]()
+            detectedIngredientsSet = Set<String>()
+            IngredientsFoundSubtitle.isHidden = true
+            IngredientsFoundTitle.isHidden = true
+            backButton.isHidden = true
+            tableView.isHidden = true
+            
+        case .hasStartedDetecting:
+            self.setViewHidden(view: self.detectedTipsView, hidden: false)
+            self.setViewHidden(view: self.undetectedTipsView, hidden: true)
+    
+        case .hasTimedOutDetecting:
+            self.setViewHidden(view: self.isNoneTipsView, hidden: false)
+            self.setViewHidden(view: self.detectedTipsView, hidden: true)
+            self.setViewHidden(view: self.undetectedTipsView, hidden: true)
+            backButton.isHidden = false
+            
+        case .hasDetected:
+            self.setViewHidden(view: self.undetectedTipsView, hidden: true)
+            self.setViewHidden(view: self.detectedTipsView, hidden: true)
+            IngredientsFoundSubtitle.isHidden = false
+            IngredientsFoundTitle.text = self.detectedIngredients.count == 1 ? "Unsustainable Ingredient Found" : "Unsustainable Ingredients Found"
+            IngredientsFoundTitle.isHidden = false
+            backButton.isHidden = false
+            tableView.isHidden = false
+            tableView.reloadData() // needs to be called somewhere else otherwise table won't refresh
+            
+        case .noCamera:
+            break
+            
+        case .error:
+            // Perhaps we will have a separate view controller for handling errors, for
+            // which we will make a different delegate
+            break
+        }
+    }
+}
+
+// MARK: - State Delegate Functions
+extension MainViewController: MainViewControllerDelegate {
+    func didStartScanning() {
+        stateChanger?.changeTo(state: .hasStartedScanning)
+    }
+    
+    func didStartDetecting() {
+        stateChanger?.changeTo(state: .hasStartedDetecting)
+    }
+    
+    func didTimeOutDetecting() {
+        stateChanger?.changeTo(state: .hasTimedOutDetecting)
+    }
+    
+    func didDetect() {
+        stateChanger?.changeTo(state: .hasDetected)
+    }
+    
+    func didDisableCamera() {
+        stateChanger?.changeTo(state: .noCamera)
+    }
 }

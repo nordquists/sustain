@@ -1,33 +1,30 @@
 /*
-See LICENSE folder for this sample’s licensing information.
-
-Abstract:
-Vision view controller.
-            Recognizes text using a Vision VNRecognizeTextRequest request handler in pixel buffers from an AVCaptureOutput.
-            Displays bounding boxes around recognized text results in real time.
-*/
+ See LICENSE folder for this sample’s licensing information.
+ 
+ Abstract:
+ Vision view controller.
+ Recognizes text using a Vision VNRecognizeTextRequest request handler in pixel buffers from an AVCaptureOutput.
+ Displays bounding boxes around recognized text results in real time.
+ */
 
 import Foundation
 import UIKit
 import AVFoundation
 import Vision
 
-class VisionViewController: ViewController { // This is a subclass of our view controller
+class VisionViewController: CaptureViewController { // This is a subclass of our view controller
     var request: VNRecognizeTextRequest!
-    // Temporal string tracker
     let numberTracker = StringTracker()
     
     override func viewDidLoad() {
-        // Set up vision request before letting ViewController set up the camera
+        // Set up vision request before lett    ing ViewController set up the camera
         // so that it exists when the first buffer is received.
         request = VNRecognizeTextRequest(completionHandler: recognizeTextHandler)
-
+        
         super.viewDidLoad()
     }
     
     // MARK: - Text recognition
-    
-    // Vision recognition handler.
     func recognizeTextHandler(request: VNRequest, error: Error?) {
         var numbers = [String]()
         var greenBoxes = [CGRect]() // Shows words that might be serials
@@ -38,16 +35,9 @@ class VisionViewController: ViewController { // This is a subclass of our view c
         
         let maximumCandidates = 1
         
-        
         for visionResult in results {
             guard let candidate = visionResult.topCandidates(maximumCandidates).first else { continue }
             
-          
-            // Draw red boxes around any detected text, and green boxes around
-            // any detected phone numbers. The phone number may be a substring
-            // of the visionResult. If a substring, draw a green box around the
-            // number and a red box around the full string. If the number covers
-            // the full result only draw the green box.
             if let results = candidate.string.extractIngredients(regexPattern: self.ingredientSet.getIngredientRegex()) {
                 for result in results {
                     let (range, number) = result
@@ -63,8 +53,9 @@ class VisionViewController: ViewController { // This is a subclass of our view c
             if let result = candidate.string.extractIngredientLabel() {
                 let (range, _) = result
                 if (try? candidate.boundingBox(for: range)?.boundingBox) != nil {
-                    self.isDetecting = true
-                    self.ingredientCount += 1
+                    DispatchQueue.main.async {
+                        self.delegate?.didStartDetecting()
+                    }
                 }
             }
         }
@@ -72,24 +63,19 @@ class VisionViewController: ViewController { // This is a subclass of our view c
         numberTracker.logFrame(strings: numbers)
         show(boxGroups: [(color: UIColor.orange.cgColor, boxes: greenBoxes)])
         
-        // Check if we have stable ingredients seen
+        // Check if we have stable ingredient seen
         if let ingredient = numberTracker.getStableString() {
             if !self.detectedIngredientsSet.contains(ingredient.uppercased()) {
-                self.hasDetected = true
                 print(ingredient)
                 detectedIngredients.append(self.ingredientSet.getIngredientDictionary()[ingredient.uppercased()]!)
                 self.detectedIngredientsSet.insert(ingredient.uppercased())
+                DispatchQueue.main.async {
+                    self.delegate?.didDetect()
+                    self.tableView.reloadData()
+                }
             }
             
             numberTracker.reset(string: ingredient)
-        }
-        
-        print(self.detectedIngredientsSet)
-        
-        DispatchQueue.main.async {
-            self.dispatch(type: self.ingredientCount >= 200 ? "NONE" : "")
-            self.dispatch(type: self.isDetecting ? "DETECTING" : "")
-            self.dispatch(type: self.hasDetected ? "DETECTED" : "")
         }
     }
     
@@ -113,8 +99,6 @@ class VisionViewController: ViewController { // This is a subclass of our view c
     }
     
     // MARK: - Bounding box drawing
-    
-    // Draw a box on screen. Must be called from main queue.
     var boxLayer = [CALayer]()
     func draw(rect: CGRect, color: CGColor) {
         let layer = CALayer()

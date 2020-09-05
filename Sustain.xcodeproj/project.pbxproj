@@ -20,9 +20,11 @@
 		0E51F19C24F05A91004E7F96 /* VisionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E51F19B24F05A91004E7F96 /* VisionViewController.swift */; };
 		0E51F19E24F06353004E7F96 /* StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E51F19D24F06353004E7F96 /* StringUtils.swift */; };
 		0E7633512501D24500C215B2 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 0E7633532501D24500C215B2 /* data.json */; };
+		0E7633552501DE7200C215B2 /* StateChanger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7633542501DE7200C215B2 /* StateChanger.swift */; };
+		0E7633582501E06700C215B2 /* CaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7633572501E06700C215B2 /* CaptureViewController.swift */; };
 		0E76B36224F0884C0020366C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E76B36124F0884B0020366C /* SceneDelegate.swift */; };
-		0E76B3F624F184F50020366C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E76B3F524F184F50020366C /* ViewController.swift */; };
-		0EA27F7F2501CA5E00141E16 /* VisionViewControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA27F7E2501CA5E00141E16 /* VisionViewControllerState.swift */; };
+		0E76B3F624F184F50020366C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E76B3F524F184F50020366C /* MainViewController.swift */; };
+		0EA27F7F2501CA5E00141E16 /* MainViewControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA27F7E2501CA5E00141E16 /* MainViewControllerState.swift */; };
 		0ED7150924F19393000D5F23 /* CameraTipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED7150824F19392000D5F23 /* CameraTipsView.swift */; };
 		0ED7150B24F19B0A000D5F23 /* CameraTipsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ED7150A24F19B0A000D5F23 /* CameraTipsView.xib */; };
 		0EEA83A924F36FF30069C001 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 0EEA83A824F36FF30069C001 /* .gitignore */; };
@@ -63,9 +65,11 @@
 		0E51F19B24F05A91004E7F96 /* VisionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionViewController.swift; sourceTree = "<group>"; };
 		0E51F19D24F06353004E7F96 /* StringUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUtils.swift; sourceTree = "<group>"; };
 		0E7633522501D24500C215B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Base; path = Base.lproj/data.json; sourceTree = "<group>"; };
+		0E7633542501DE7200C215B2 /* StateChanger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateChanger.swift; sourceTree = "<group>"; };
+		0E7633572501E06700C215B2 /* CaptureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureViewController.swift; sourceTree = "<group>"; };
 		0E76B36124F0884B0020366C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0E76B3F524F184F50020366C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0EA27F7E2501CA5E00141E16 /* VisionViewControllerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionViewControllerState.swift; sourceTree = "<group>"; };
+		0E76B3F524F184F50020366C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		0EA27F7E2501CA5E00141E16 /* MainViewControllerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerState.swift; sourceTree = "<group>"; };
 		0ED7150824F19392000D5F23 /* CameraTipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraTipsView.swift; sourceTree = "<group>"; };
 		0ED7150A24F19B0A000D5F23 /* CameraTipsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CameraTipsView.xib; sourceTree = "<group>"; };
 		0EEA83A824F36FF30069C001 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -173,6 +177,7 @@
 		0E7633482501D12500C215B2 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0E7633562501E03D00C215B2 /* CaptureViewController */,
 				0E76334B2501D17800C215B2 /* IngredientDetailViewController */,
 				0E76334A2501D16800C215B2 /* VisionViewController */,
 				0E7633492501D13900C215B2 /* MainViewController */,
@@ -183,7 +188,8 @@
 		0E7633492501D13900C215B2 /* MainViewController */ = {
 			isa = PBXGroup;
 			children = (
-				0E76B3F524F184F50020366C /* ViewController.swift */,
+				0EA27F7E2501CA5E00141E16 /* MainViewControllerState.swift */,
+				0E76B3F524F184F50020366C /* MainViewController.swift */,
 			);
 			path = MainViewController;
 			sourceTree = "<group>";
@@ -238,10 +244,18 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		0E7633562501E03D00C215B2 /* CaptureViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0E7633572501E06700C215B2 /* CaptureViewController.swift */,
+			);
+			path = CaptureViewController;
+			sourceTree = "<group>";
+		};
 		0EA27F7C2501C76400141E16 /* State */ = {
 			isa = PBXGroup;
 			children = (
-				0EA27F7E2501CA5E00141E16 /* VisionViewControllerState.swift */,
+				0E7633542501DE7200C215B2 /* StateChanger.swift */,
 			);
 			path = State;
 			sourceTree = "<group>";
@@ -410,11 +424,13 @@
 				0E03897A24F2D70B001154F9 /* IngredientUtils.swift in Sources */,
 				0E51F19A24F0533C004E7F96 /* PreviewView.swift in Sources */,
 				0E51F16A24F04018004E7F96 /* AppDelegate.swift in Sources */,
-				0E76B3F624F184F50020366C /* ViewController.swift in Sources */,
+				0E76B3F624F184F50020366C /* MainViewController.swift in Sources */,
 				0E51F19C24F05A91004E7F96 /* VisionViewController.swift in Sources */,
+				0E7633552501DE7200C215B2 /* StateChanger.swift in Sources */,
+				0E7633582501E06700C215B2 /* CaptureViewController.swift in Sources */,
 				0E76B36224F0884C0020366C /* SceneDelegate.swift in Sources */,
 				0ED7150924F19393000D5F23 /* CameraTipsView.swift in Sources */,
-				0EA27F7F2501CA5E00141E16 /* VisionViewControllerState.swift in Sources */,
+				0EA27F7F2501CA5E00141E16 /* MainViewControllerState.swift in Sources */,
 				0E03896D24F1B5A5001154F9 /* NibLoadable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
